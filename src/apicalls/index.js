@@ -1,5 +1,9 @@
 import axios from 'axios';
 
 export const axiosInstance = axios.create({
-    headers : {'content-Type' : 'application/json', 'Authorization' : `Bearer ${localStorage.getItem('token')}`}
-})
+    baseURL: "https://movie-booking-backend-pxnb.onrender.com", // Add your backend URL
+    headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${localStorage.getItem("token")}`,
+    },
+});
